@@ -8,19 +8,19 @@ function signUpToCreateNewAccount(){
     let comfirmPassword = $("#comfirmPassword").val();
 
     if (password == comfirmPassword){
-        let user = JSON.stringify(
-            {
-                "name" : name,
-                "password" : password,
-                "phone" : phone,
-                "email" : email
-            }
-        );
+        let account = {
+            'name' : name,
+            'password' : password,
+            'phone' : phone,
+            'email' : email
+        };
 
-        console.log(typeof user);
-
-        $.post("http://127.0.0.1:8000/sign_up", {'user': user}, function(result){
-            console.log(user);
-        });
+        $.ajax({
+            type : "POST",
+            url : "http://127.0.0.1:8000/sign_up",
+            data : JSON.stringify(account),
+            contentType : "application/json",
+            success : (response) => console.log(response),
+        })
     }
 }
