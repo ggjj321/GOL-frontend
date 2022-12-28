@@ -1,5 +1,6 @@
 document.documentElement.setAttribute('data-theme','dark');
-// let tokenCookie = document.cookie;
+
+let tokenCookie = document.cookie;
 
 function signUpToCreateNewAccount(){
     let name = $("#name").val();
@@ -26,18 +27,34 @@ function signUpToCreateNewAccount(){
     }
 }
 
-const userInfo = {
-    username : 'kll',
-    password : '123456',
+const createCookie = (userInfo) => {
+    tokenCookie += userInfo.username + "=" + userInfo.password + ";";
+}
+
+
+const onclickLogin = () => {
+    // let formData = new FormData();
+    // formData.append('username', 'kll');
+    // formData.append('password', '123456');
+    // console.log(formData);
+
+    const userInfo = {
+        'username' : document.getElementById("username").value,
+        'password' : document.getElementById("password").value
+    }
+    console.log(userInfo);
+
+    fetch('http://0.0.0.0:80/login', {
+        method: 'POST',
+        body: JSON.stringify(userInfo),
+    })
+    .then(response => {
+        console.log(response);
+        createCookie(userInfo);
+    })
+    .catch(err => {
+        console.log(err)
+    })
+    console.log(tokenCookie);
 };
 
-const getToken = () => {
-    $.ajax({
-        type : "POST",
-        url : "http://0.0.0.0:80/login",
-        data : JSON.stringify(userInfo),
-        contentType : "application/json",
-        success : (response) => console.log(response),
-    });
-}
-    
