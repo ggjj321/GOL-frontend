@@ -20,7 +20,7 @@ function signUpToCreateNewAccount() {
         $.ajax({
             type: "POST",
             url: "http://127.0.0.1:80/sign_up",
-            data: account,
+            data: JSON.stringify(account),
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json"
