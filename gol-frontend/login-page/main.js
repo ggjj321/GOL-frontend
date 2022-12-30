@@ -1,7 +1,5 @@
 document.documentElement.setAttribute('data-theme', 'dark');
 
-let tokenCookie = document.cookie;
-
 function signUpToCreateNewAccount() {
     let name = $("#name").val();
     let phone = $("#phone").val();
@@ -31,12 +29,6 @@ function signUpToCreateNewAccount() {
     }
 }
 
-const createCookie = (responseToken) => {
-    tokenCookie = responseToken;
-    console.log(tokenCookie);
-}
-
-
 const onclickLogin = () => {
     let userInfo = {
         "username": document.getElementById("username").value,
@@ -51,7 +43,10 @@ const onclickLogin = () => {
             Accept: "application/json",
             "Content-Type": "application/x-www-form-urlencoded"
         },
-        success: (responseToken) => createCookie(responseToken),
+        success: (responseToken) => {
+            createCookie(responseToken);
+            window.location.href = "../test.html";
+        },
         error: (response) => console.log(response),
     });
 };

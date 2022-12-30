@@ -1,0 +1,11 @@
+<html>
+<script>
+    testclick = () => {
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        console.log(ca);
+    }
+</script>
+<button type="button" onclick="testclick()">Click Me!</button>
+
+</html>
