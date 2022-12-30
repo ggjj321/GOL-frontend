@@ -31,8 +31,9 @@ function signUpToCreateNewAccount() {
     }
 }
 
-const createCookie = (userInfo) => {
-    tokenCookie += userInfo.username + "=" + userInfo.password + ";";
+const createCookie = (responseToken) => {
+    tokenCookie = responseToken;
+    console.log(tokenCookie);
 }
 
 
@@ -50,7 +51,7 @@ const onclickLogin = () => {
             Accept: "application/json",
             "Content-Type": "application/x-www-form-urlencoded"
         },
-        success: (response) => console.log(response),
+        success: (responseToken) => createCookie(responseToken),
         error: (response) => console.log(response),
     });
 };
