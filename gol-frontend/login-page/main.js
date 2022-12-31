@@ -1,5 +1,10 @@
 document.documentElement.setAttribute('data-theme', 'dark');
 
+const createCookie = (responseToken) => {
+    document.cookie = "access_token=" + responseToken['access_token'] + "; path=/";
+    console.log(document.cookie);
+}
+
 function signUpToCreateNewAccount() {
     let name = $("#name").val();
     let phone = $("#phone").val();
