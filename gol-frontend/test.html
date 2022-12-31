@@ -1,0 +1,37 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    testclick = () => {
+        token = getCookie("access_token");
+        console.log(token);
+        $.ajax({
+            type: "POST",
+            url: "http://127.0.0.1/me",
+            dataType: 'json',
+            headers: {
+                "Authorization": " Bearer " + token
+            },
+            success: function (user) {
+                console.log(user)
+                alert(user);
+            }
+        });
+    }
+</script>
+<button type="button" onclick="testclick()">Click Me!</button>
+
+</html>

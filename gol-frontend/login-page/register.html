@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="../login-page/css/side-bar.css" />
   <link rel="stylesheet" href="../login-page/css/style.css" />
   <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="./main.js"></script>
 </head>
 
@@ -34,35 +35,35 @@
         <div class="label-title edit-row-left">
           <span>Name</span>
         </div>
-        <input type="text"/>
+        <input id = "name" type="text"/>
       </div>
       <div class="item grid">
         <div class="label-title edit-row-left">
-          <span>Username</span>
+          <span>Phone</span>
         </div>
-        <input type="text"/>
+        <input id = "phone" type="text"/>
       </div>
       <div class="item grid">
         <div class="label-title edit-row-left">
           <span>Email Address</span>
         </div>
-        <input type="text"/>
+        <input id = "email" type="text"/>
       </div>
       <div class="item grid">
         <div class="label-title edit-row-left">
           <span>Password</span>
         </div>
-        <input type="password"/>
+        <input id = "password" type="password"/>
       </div>
       <div class="item grid">
         <div class="label-title edit-row-left">
           <span>Comfirm Password</span>
         </div>
-        <input type="text"/>
+        <input id = "comfirmPassword" type="password"/>
       </div>      
       <div class="item grid">
           <div class="label-title edit-row-left"></div>
-          <button class="click-button">SIGN UP</button>
+          <button class="click-button" onclick="signUpToCreateNewAccount()">SIGN UP</button>
       </div>    
       <div class="item grid">
         <div class="label-title edit-row-left"></div>
