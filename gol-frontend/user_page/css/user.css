@@ -42,7 +42,7 @@ input[type=text] {
     border: 1px solid darkgrey;
   }
 
-  .btn-dollar{
+.btn-dollar{
     position: relative;
     cursor: pointer;
     background-color: #121212;
@@ -345,10 +345,6 @@ input[type=text] {
     bottom: -2px
 } 
 
-.main-widget{
-    display: flex;
-}
-
 .review-photo{
     display: flex;
     margin: 30px 37px 0 37px;
@@ -465,7 +461,7 @@ input[type=text] {
 
 .main-widget{
     display: flex;
-    background-color: rgb(35, 35, 35);
+    /* background-color: rgb(35, 35, 35); */
     width: 1060px;
     height: 100vh;
     margin-top: 30px;
@@ -486,4 +482,19 @@ input[type=text] {
     box-shadow: 3px 3px 3px black;
     border-style: none;
     transform: scale(1.02)
+}
+
+/* .name, .username, .email{
+    color: white;
+} */
+
+.user-widget{
+    margin: 130px 0 0 50px;
+    color: white;
+    font-size: xx-large;
+}
+
+.head-sticker{
+    border-radius: 200px;
+    margin: 30px 20px 0 30px;
 }
