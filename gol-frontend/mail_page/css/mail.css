@@ -256,6 +256,17 @@ input[type=text] {
     
 }
 
+.write{
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    margin: 20px 0 10px 25px;
+    background-color: white;
+    font-size: large;
+}
+
 .filters{
     margin: 30px 30px 15px 25px;
     font-weight:bold; 

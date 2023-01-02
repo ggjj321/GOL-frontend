@@ -33,7 +33,7 @@
             <div class="inner">
                 <a class="dollar btn-dollar" ><i class="gg-dollar"></i></a>
                 <a class="mail btn-mail" href = "../mail_page/mail.html"><i class="gg-mail"></i></a>
-                <a class="login btn-login" ><i class="gg-profile"></i></a>
+                <a class="login btn-login" href="../user_page/user.html"><i class="gg-profile"></i></a>
                 <a class="shopping-cart btn-shopping-cart" ><i class="gg-shopping-cart"></i></a>
             </div>
         </div>
@@ -43,6 +43,7 @@
 
         <div class = "left-sidebar">
 
+            <input type="button" class="write btn-lg" value="write" name="按鈕名稱">
             <h2 class="filters">Filters</h2>
             <i class="gg-card-hearts">
                 <a href="#" style="text-decoration:none;">
@@ -73,7 +74,24 @@
 
     </div>
 
+    <script>
+        var button = document.querySelector('.write');
+        var showtxt = document.querySelector('.show');
+
+        function popup3(e) {
+            var guest = window.prompt('sent the mail to the administrator', '');
+            if (guest == null || "") {
+                showtxt.innerHTML = '您已取消輸入'
+            } else {
+                showtxt.innerHTML = 'Good Day' + guest + '^^'
+            }
+
+        }
+        button.addEventListener('click', popup3);
+    </script>
+
 
 </body>
+
 
 </html>
