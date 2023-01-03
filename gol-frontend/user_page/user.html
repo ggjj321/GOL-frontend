@@ -8,7 +8,7 @@
   <!-- <link rel="stylesheet" href="../cart_page/css/reset.css" /> -->
   <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
   <!-- <link rel="stylesheet" href="../cart_page/css/side-bar.css" /> -->
-  <link rel="stylesheet" href="../mail_page/css/mail.css" />
+  <link rel="stylesheet" href="../user_page/css/user.css" />
   <link src='https://css.gg/card-hearts.css' rel='stylesheet'>
   <link href='https://css.gg/arrow-long-right-r.css' rel='stylesheet'>
   <link href='https://css.gg/math-plus.css' rel='stylesheet'>
@@ -43,7 +43,6 @@
 
         <div class = "left-sidebar">
 
-            <input type="button" class="write btn-lg" value="write" name="按鈕名稱">
             <h2 class="filters">Filters</h2>
             <i class="gg-card-hearts">
                 <a href="#" style="text-decoration:none;">
@@ -60,38 +59,20 @@
         </div>
 
         <div class = "main-widget">
-            <div class = "each-mail">
-                <a href="../cart_page/homepage.html">
-                    <h3 class = "mail-title">message title</h3>
-                </a>
+            <!-- <h2 class = "name">name : andy</h2>
+            <h2 class = "username">user name : andyBro</h2>
+            <h2 class = "email">email : andy@gmail.com</h2> -->
+            <div>
+                <img class = "head-sticker" src = "img/0.png">
             </div>
-            <!-- <div class = "each-mail">
-                <a href="../cart_page/homepage.html">
-                    <h3 class = "mail-title">message title</h3>
-                </a>
-            </div> -->
+            <div class = "user-widget">
+                <p> name : andy <br> user name : andyBro <br> email : andy@gmail.com </p>
+            </div>
         </div>
 
     </div>
 
-    <script>
-        var button = document.querySelector('.write');
-        var showtxt = document.querySelector('.show');
-
-        function popup3(e) {
-            var guest = window.prompt('sent the mail to the administrator', '');
-            if (guest == null || "") {
-                showtxt.innerHTML = '您已取消輸入'
-            } else {
-                showtxt.innerHTML = 'Good Day' + guest + '^^'
-            }
-
-        }
-        button.addEventListener('click', popup3);
-    </script>
-
 
 </body>
-
 
 </html>
