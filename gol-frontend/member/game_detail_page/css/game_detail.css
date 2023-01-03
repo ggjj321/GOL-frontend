@@ -50,6 +50,24 @@
     font-size: 25px;
 }
 
+.version {
+    color: #ffffff;
+    margin: 30px 0px 10px 53px;
+    font-size: 25px;
+}
+
+.genre {
+    color: #ffffff;
+    margin: 30px 0px 10px 53px;
+    font-size: 25px;
+}
+
+.de_name {
+    color: #ffffff;
+    margin: 30px 0px 10px 53px;
+    font-size: 25px;
+}
+
 .introduction {
     color: #ffffff;
     margin: 40px 0px 0px 53px;

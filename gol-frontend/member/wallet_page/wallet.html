@@ -17,6 +17,8 @@
     <link href='https://css.gg/profile.css' rel='stylesheet'>
     <link href='https://css.gg/mail.css' rel='stylesheet'>
     <link href='https://css.gg/dollar.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
     <style type="text/css">
         A:link {
             text-decoration: none;
@@ -80,11 +82,12 @@
         <div class="main-widget">
             <div class="line1">
                 <h2 class="add-money">add money</h2>
-                <input class="enter enter-dollar" type="text" placeholder="enter dollar.." />
+                <input class="enter-dollar" type="text" placeholder="enter dollar.." />
             </div>
             <div>
                 <h2 class="balance">balance : 0 $</h2>
             </div>
+            <button class="btn-plus" type="button"><i class="gg-math-plus" onclick="addMoney()"></i></button>
         </div>
 
     </div>
