@@ -1,6 +1,26 @@
 document.documentElement.setAttribute('data-theme', 'dark');
 
-let tokenCookie = document.cookie;
+const createCookie = (responseToken) => {
+    document.cookie = "access_token=" + responseToken['access_token'] + "; path=/";
+    document.cookie = "authority=" + responseToken['authority'] + "; path=/";
+    console.log(document.cookie);
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 function signUpToCreateNewAccount() {
     let name = $("#name").val();
@@ -20,7 +40,7 @@ function signUpToCreateNewAccount() {
         $.ajax({
             type: "POST",
             url: "http://127.0.0.1:80/sign_up",
-            data: account,
+            data: JSON.stringify(account),
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json"
@@ -31,10 +51,20 @@ function signUpToCreateNewAccount() {
     }
 }
 
-const createCookie = (userInfo) => {
-    tokenCookie += userInfo.username + "=" + userInfo.password + ";";
-}
+const routeWithAuth = () => {
+    let auth = getCookie("authority");
+    console.log(auth);
 
+    if (auth == "Admin") {
+        window.location.href = "../admin/mail_page/mail.html";
+    }
+    if (auth == "Developer") {
+        window.location.href = "../developer/upload-page/upload.html";
+    }
+    if (auth == "Member") {
+        window.location.href = "../member/whole_game_page/homepage.html";
+    }
+}
 
 const onclickLogin = () => {
     let userInfo = {
@@ -50,7 +80,10 @@ const onclickLogin = () => {
             Accept: "application/json",
             "Content-Type": "application/x-www-form-urlencoded"
         },
-        success: (response) => console.log(response),
+        success: (responseToken) => {
+            createCookie(responseToken);
+            routeWithAuth();
+        },
         error: (response) => console.log(response),
     });
 };
