@@ -31,18 +31,18 @@
     justify-content: left;
     background-color: rgb(31, 31, 31);
     color: white;
+    margin: 40px 0;
+    width: 50%;
 }
 
 input[type=text] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 40px 0;
+    padding: 12px 20px;  
     box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid darkgrey;
   }
 
-  .btn-dollar{
+.btn-dollar{
     position: relative;
     cursor: pointer;
     background-color: #121212;
@@ -345,10 +345,6 @@ input[type=text] {
     bottom: -2px
 } 
 
-.main-widget{
-    display: flex;
-}
-
 .review-photo{
     display: flex;
     margin: 30px 37px 0 37px;
@@ -455,10 +451,80 @@ input[type=text] {
   
 .gg-readme::before {
     border-top-right-radius: 3px;
-    left: -8px
+    left: -8px;
 }
   
 .gg-readme::after {
     border-top-left-radius: 3px;
     right: -8px
+}
+
+.main-widget{
+    /* display: flex; */
+    /* background-color: rgb(35, 35, 35); */
+    width: 1060px;
+    height: 100vh;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.each-mail{
+    width: 1060px;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color: rgb(35, 35, 35);
+    border-bottom-style: solid;
+    border-bottom-color: rgb(54, 54, 54);
+}
+
+.each-mail:hover{
+    box-shadow: 3px 3px 3px black;
+    border-style: none;
+    transform: scale(1.02)
+}
+
+/* .name, .username, .email{
+    color: white;
+} */
+
+.user-widget{
+    margin: 130px 0 0 50px;
+    color: white;
+    font-size: xx-large;
+}
+
+.head-sticker{
+    border-radius: 200px;
+    margin: 30px 20px 0 30px;
+}
+
+.line1{
+    display: flex;
+}
+
+.enter{
+    width: 110px;
+    height: 30px;
+    margin: 0 0 0 30px;
+}
+
+.enter-dollar{
+    display: flex;
+    justify-content: left;
+    background-color: rgb(31, 31, 31);
+    color: white;
+}
+
+.add-money{
+    color: white;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.balance{
+    color: white;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 30px;
 }

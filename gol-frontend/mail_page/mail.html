@@ -8,7 +8,7 @@
   <!-- <link rel="stylesheet" href="../cart_page/css/reset.css" /> -->
   <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
   <!-- <link rel="stylesheet" href="../cart_page/css/side-bar.css" /> -->
-  <link rel="stylesheet" href="../cart_page/css/homepage.css" />
+  <link rel="stylesheet" href="../mail_page/css/mail.css" />
   <link src='https://css.gg/card-hearts.css' rel='stylesheet'>
   <link href='https://css.gg/arrow-long-right-r.css' rel='stylesheet'>
   <link href='https://css.gg/math-plus.css' rel='stylesheet'>
@@ -17,6 +17,10 @@
   <link href='https://css.gg/profile.css' rel='stylesheet'>
   <link href='https://css.gg/mail.css' rel='stylesheet'>
   <link href='https://css.gg/dollar.css' rel='stylesheet'>
+  <style type="text/css">
+    A:link {text-decoration: none ; color: red }
+    A:visited {text-decoration: none ; color: white } 
+  </style>
 </head>
 
 <body bgcolor="#121212">
@@ -39,6 +43,7 @@
 
         <div class = "left-sidebar">
 
+            <input type="button" class="write btn-lg" value="write" name="按鈕名稱">
             <h2 class="filters">Filters</h2>
             <i class="gg-card-hearts">
                 <a href="#" style="text-decoration:none;">
@@ -54,44 +59,39 @@
             </i>
         </div>
 
-        <div class = "main_widget">
-            
-            <div class = "review-photo">
-                <div>
-                    <a href = "../game_detail_page/game_detail.html">
-                        <img class="review" src="img/0.png">
-                    </a>
-                    <button class="btn-plus" type="button"><i class="gg-math-plus"></i></button>
-                    <button class="btn-readme" type="button"><i class="gg-readme"></i></button>
-                </div>
-                <div>
-                    <a href = "../game_detail_page/game_detail.html">
-                        <img class="review" src="img/0.png">
-                    </a>
-                    <button class="btn-plus" type="button"><i class="gg-math-plus"></i></button>
-                    <button class="btn-readme" type="button"><i class="gg-readme"></i></button>
-                </div>
-                <div>
-                    <a href = "../game_detail_page/game_detail.html">
-                        <img class="review" src="img/0.png">
-                    </a>
-                    <button class="btn-plus" type="button"><i class="gg-math-plus"></i></button>
-                    <button class="btn-readme" type="button"><i class="gg-readme"></i></button>
-                </div>
-                <div>
-                    <a href = "../game_detail_page/game_detail.html">
-                        <img class="review" src="img/0.png">
-                    </a>
-                    <button class="btn-plus" type="button"><i class="gg-math-plus"></i></button>
-                    <button class="btn-readme" type="button"><i class="gg-readme"></i></button>
-                </div>
+        <div class = "main-widget">
+            <div class = "each-mail">
+                <a href="../cart_page/homepage.html">
+                    <h3 class = "mail-title">message title</h3>
+                </a>
             </div>
-
+            <!-- <div class = "each-mail">
+                <a href="../cart_page/homepage.html">
+                    <h3 class = "mail-title">message title</h3>
+                </a>
+            </div> -->
         </div>
 
     </div>
 
+    <script>
+        var button = document.querySelector('.write');
+        var showtxt = document.querySelector('.show');
+
+        function popup3(e) {
+            var guest = window.prompt('sent the mail to the administrator', '');
+            if (guest == null || "") {
+                showtxt.innerHTML = '您已取消輸入'
+            } else {
+                showtxt.innerHTML = 'Good Day' + guest + '^^'
+            }
+
+        }
+        button.addEventListener('click', popup3);
+    </script>
+
 
 </body>
+
 
 </html>

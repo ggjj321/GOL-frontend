@@ -350,15 +350,15 @@ input[type=text] {
 }
 
 .review-photo{
-    display: flex;
-    margin: 30px 37px 0 37px;
+    width: 1113px;
+    margin: 10px 37px 0 37px;
 }
 
 .review{
     width: 215px;
-    height: 215px;
+    height: 300px;
     border-radius: 10px;
-    margin: 20px 27px 0px 27px;
+    margin: 40px 27px 0px 27px;
 }
     
 .review:hover{
@@ -390,10 +390,6 @@ input[type=text] {
   transform: scale(var(--ggs,1));
   width: 16px;
   height: 2px
-}
-
-.gg-math-plus:hover{
-
 }
 
 .gg-math-plus::after {
