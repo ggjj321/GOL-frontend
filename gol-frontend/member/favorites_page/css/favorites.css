@@ -3,71 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "ubuntu", sans-serif;
-}
-
-.main{
-    display: flex;
-}
-
-.game-title-page{
-    width: 400px;
-    height: 500px;
-    border-radius: 10px;
-    margin: 30px 27px 0px 27px;
-}
-
-.game-title-page:hover{
-    transform: scale(1.05)
-}
-
-.name-of-game{
-    /* display: flex; */
-    /* background-color: pink; */
-    color: #ffffff;
-    margin: 60px 0px 30px 50px;
-    font-size: 70px;
-    font-weight: bold;
-}
-
-.price{
-    color: #ffffff;
-    margin: 40px 0px 0px 53px;
-    font-size: 40px;
-    text-decoration: line-through;
-    text-decoration-color: red;
-    text-decoration-style: double;
-}
-
-.discount-price{
-    color: red;
-    margin: 20px 0px 10px 10px;
-    font-size: 40px;
-}
-
-.up-time{
-    color:#ffffff;
-    margin: 30px 0px 10px 53px;
-    font-size: 25px;
-}
-
-.introduction{
-    color:#ffffff;
-    margin: 40px 0px 0px 53px;
-    font-size: 30px;
-}
-
-.text-region{
-    /* display: flex; */
-    width: 473px;
-    /* background: pink; */
-    margin: 10px 0px 0px 53px;
-}
-
-.introduction-content{
-    color:#ffffff;
-    font-size: 20px;
-    word-wrap: break-word;
-}
+  }
 
 .top-widget{
     display: flex;
@@ -414,15 +350,15 @@ input[type=text] {
 }
 
 .review-photo{
-    display: flex;
-    margin: 30px 37px 0 37px;
+    width: 1113px;
+    margin: 10px 37px 0 37px;
 }
 
 .review{
     width: 215px;
-    height: 215px;
+    height: 300px;
     border-radius: 10px;
-    margin: 20px 27px 0px 27px;
+    margin: 40px 27px 0px 27px;
 }
     
 .review:hover{
