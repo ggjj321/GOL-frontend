@@ -37,6 +37,7 @@ function setValue(user) {
     $(".id").text("id: " + user["id"] + " ");
     $(".create_at").text("sign up day: " + user["create_at"] + " ");
     $(".member_balance").text("member_balance: " + user["member_balance"] + " ");
+    $(".auth_choose").val(user["authority"]).change();
 }
 
 let token = getCookie("access_token");
