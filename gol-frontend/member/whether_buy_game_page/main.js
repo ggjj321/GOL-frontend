@@ -14,11 +14,9 @@ function getCookie(cname) {
     return "";
 }
 
-let detailgameID = getCookie("detailgameID");
-
 $.ajax({
     type: "GET",
-    url: "http://127.0.0.1/Game/get_game_data_by_id?game_id=" + detailgameID,
+    url: "http://127.0.0.1/Game/get_game_data_by_id?game_id=" + getCookie("detailgameID"),
     headers: {
         Accept: "application/json",
     },
@@ -37,28 +35,37 @@ $.ajax({
     error: (response) => console.log(response),
 });
 
-function pushGameToCart() {
-
-    let token = getCookie("access_token");
-
-    let cart = {
-        "cart_id": 0,
-        "user_id": 0,
-        "game_id": detailgameID,
-        "cost": 0,
-        "place_order": true
-    }
-
+function buyThisGame() {
     $.ajax({
-        type: "POST",
-        url: "http://127.0.0.1/Cart/add_cart",
-        data: JSON.stringify(cart),
+        type: "PATCH",
+        url: "http://127.0.0.1/Cart/update_cart_place_order?game_id=" + getCookie("detailgameID") + "&place_order=true",
         headers: {
             Accept: "application/json",
-            "Content-Type": "application/json",
-            "Authorization": " Bearer " + token
+            "Authorization": " Bearer " + getCookie("access_token")
         },
-        success: (response) => alert("add to cart"),
+        success: (response) => {
+            alert("add to library");
+            window.location.href = "../cart_page/homepage.html";
+
+        },
+        error: (response) => console.log(response),
+    });
+
+}
+
+function removeGame() {
+    $.ajax({
+        type: "DELETE",
+        url: "http://127.0.0.1/Cart/delete_cart?gameID=" + getCookie("detailgameID"),
+        headers: {
+            Accept: "application/json",
+            "Authorization": " Bearer " + getCookie("access_token")
+        },
+        success: (response) => {
+            alert("delete game from cart");
+            window.location.href = "../cart_page/homepage.html";
+
+        },
         error: (response) => console.log(response),
     });
 }
