@@ -55,15 +55,12 @@ $.ajax({
 });
 
 function logOut() {
-    const cookies = document.cookie.split(";");
+    document.cookie = "access_token=; path=/;";
+    document.cookie = "authority=; path=/;";
+    document.cookie = "detailgameID=; path=/;";
 
-    for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i];
-        const eqPos = cookie.indexOf("=");
-        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    }
+    console.log(top.location.href);
 
-    window.location.href = "";
+    location.href = "../../login-page/login.html";
 
 }

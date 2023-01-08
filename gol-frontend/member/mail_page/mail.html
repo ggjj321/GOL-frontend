@@ -79,38 +79,11 @@
         </div>
 
         <div class="main-widget">
-            <div class="each-mail">
-                <a href="../cart_page/homepage.html">
-                    <h3 class="mail-title">message title</h3>
-                </a>
-            </div>
-            <!-- <div class = "each-mail">
-                <a href="../cart_page/homepage.html">
-                    <h3 class = "mail-title">message title</h3>
-                </a>
-            </div> -->
         </div>
 
     </div>
-
-    <script>
-        var button = document.querySelector('.write');
-        var showtxt = document.querySelector('.show');
-
-        function popup3(e) {
-            var guest = window.prompt('sent the mail to the administrator', '');
-            if (guest == null || "") {
-                showtxt.innerHTML = '您已取消輸入'
-            } else {
-                showtxt.innerHTML = 'Good Day' + guest + '^^'
-            }
-
-        }
-        button.addEventListener('click', popup3);
-    </script>
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
 </body>
-
 
 </html>

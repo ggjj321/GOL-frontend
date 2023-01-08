@@ -25,6 +25,7 @@ $.ajax({
     success: (responseGame) => {
         console.log(responseGame);
         $(".name-of-game").text(responseGame["game_name"]);
+        $(".game-id").text("game ID : " + responseGame["game_id"]);
         $(".price").text(responseGame["game_sale_price"]);
         $(".discount-price").text(parseInt(responseGame["game_sale_price"]) * (1 - parseFloat(responseGame["game_discount"])));
         $(".up-time").text("up date : " + responseGame["create_at"]);

@@ -45,7 +45,7 @@ function signUpToCreateNewAccount() {
                 Accept: "application/json",
                 "Content-Type": "application/json"
             },
-            success: (response) => console.log(response),
+            success: (response) => alert(success),
             error: (response) => console.log(response),
         });
     }

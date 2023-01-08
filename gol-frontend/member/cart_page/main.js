@@ -60,6 +60,9 @@ function buyAllGame() {
         success: (response) => {
             alert("You don't have enough money");
         },
-        error: (response) => console.log(response),
+        error: (response) => {
+            alert("add to library")
+            window.location.href = "../cart_page/homepage.html";
+        },
     });
 }
