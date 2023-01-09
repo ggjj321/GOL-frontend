@@ -20,7 +20,7 @@
     <style type="text/css">
         A:link {
             text-decoration: none;
-            color: red
+            color: white
         }
 
         A:visited {
@@ -41,7 +41,7 @@
                 <a class="dollar btn-dollar" href="../wallet_page/wallet.html"><i class="gg-dollar"></i></a>
                 <a class="mail btn-mail" href="../mail_page/mail.html"><i class="gg-mail"></i></a>
                 <a class="login btn-login" href="../user_page/user.html"><i class="gg-profile"></i></a>
-                <a class="shopping-cart btn-shopping-cart"><i class="gg-shopping-cart"></i></a>
+                <a class="shopping-cart btn-shopping-cart" href="../cart_page/homepage.html"><i class="gg-shopping-cart"></i></a>
             </div>
         </div>
     </div>
@@ -51,15 +51,10 @@
         <div class="left-sidebar">
 
             <input type="button" class="write btn-lg" value="write" name="按鈕名稱">
-            <h2 class="filters">Filters</h2>
+            <h2 class="filters">GAME LIST</h2>
             <i class="gg-card-hearts">
                 <a href="../whole_game_page/homepage.html" style="text-decoration:none;">
                     <h3 style="font-style:normal; font-weight:normal; padding-left:30px; color:white;">Shop</h3>
-                </a>
-            </i>
-            <i class="gg-card-hearts">
-                <a href="../cart_page/homepage.html" style="text-decoration:none;">
-                    <h3 style="font-style:normal; font-weight:normal; padding-left:30px; color:white;">Cart</h3>
                 </a>
             </i>
             <i class="gg-card-hearts">
@@ -67,18 +62,19 @@
                     <h3 style="font-style:normal; font-weight:normal; padding-left:30px; color:white;">Libiary</h3>
                 </a>
             </i>
-            <h2 class="classification" style="font-style:normal; font-weight:bold; color:white">Classification</h2>
-            <i class="gg-arrow-long-right-r" style="width: 30px; margin-top:10px">
-                <a href="#" style="text-decoration:none;">
-                    <h3
-                        style=" font-style:normal; font-weight:normal; padding-left:40px; margin-top:-10px; color:white ;">
-                        Shooting
-                    </h3>
-                </a>
-            </i>
         </div>
 
         <div class="main-widget">
+            <div class="each-mail">
+                <a>
+                    <h3 class="mail-title">violation : ${element["violation_content"]}</h3>
+                </a>   
+            </div>
+            <div class="each-mail">
+                <a>
+                    <h3 class="mail-title">violation : ${element["violation_content"]}</h3>
+                </a>   
+            </div>
         </div>
 
     </div>

@@ -357,7 +357,7 @@ input[type=text] {
 } 
 
 .main-widget{
-    display: flex;
+    /* display: flex; */
 }
 
 .review-photo{
@@ -475,7 +475,7 @@ input[type=text] {
 }
 
 .main-widget{
-    display: flex;
+    /* display: flex; */
     background-color: rgb(35, 35, 35);
     width: 1060px;
     height: 100vh;
@@ -491,6 +491,7 @@ input[type=text] {
     background-color: rgb(35, 35, 35);
     border-bottom-style: solid;
     border-bottom-color: rgb(54, 54, 54);
+    color: white;
 }
 
 .each-mail:hover{
