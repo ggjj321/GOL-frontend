@@ -462,3 +462,24 @@ input[type=text] {
     border-top-left-radius: 3px;
     right: -8px
 }
+
+.top{
+    display: flex;
+}
+
+.total-money{
+    margin-top: 40px;
+    margin-left: 32px;
+}
+
+.buy-all{
+    width: 100px;
+    height: 30px;
+    margin-top: 38px;
+    margin-left: 15px;
+    border-radius: 10px;
+    background-color: white;
+    border-color: white;
+    border: 1px;
+    font-size: 15px;
+}
