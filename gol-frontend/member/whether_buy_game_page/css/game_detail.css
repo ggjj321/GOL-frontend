@@ -527,3 +527,20 @@ input[type=text] {
     border-top-left-radius: 3px;
     right: -8px
 }
+
+.game-photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-buy{
+    background: rgb(42, 138, 228);
+    color: rgb(42, 138, 228);
+}
+
+.btn{
+    display: flex;
+    width: 454px;
+    
+}
