@@ -21,7 +21,7 @@
 
 .inner{
     display: flex;
-    width: 200px;
+    width: 100px;
     justify-content: space-around;
     margin-right: 30px;
 }
