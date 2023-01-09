@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>GOL</title>
+    <!-- <link rel="stylesheet" href="../cart_page/css/reset.css" /> -->
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="../cart_page/css/side-bar.css" /> -->
+    <link rel="stylesheet" href="../user_page/css/user.css" />
+    <link src='https://css.gg/card-hearts.css' rel='stylesheet'>
+    <link href='https://css.gg/arrow-long-right-r.css' rel='stylesheet'>
+    <link href='https://css.gg/math-plus.css' rel='stylesheet'>
+    <link href='https://css.gg/shopping-cart.css' rel='stylesheet'>
+    <link href='https://css.gg/readme.css' rel='stylesheet'>
+    <link href='https://css.gg/profile.css' rel='stylesheet'>
+    <link href='https://css.gg/mail.css' rel='stylesheet'>
+    <link href='https://css.gg/dollar.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+    <style type="text/css">
+        A:link {
+            text-decoration: none;
+            color: red
+        }
+
+        A:visited {
+            text-decoration: none;
+            color: white
+        }
+    </style>
+</head>
+
+<body bgcolor="#121212">
+
+    <div class="top-widget">
+
+        <img class="logo" src="img/logo.png" width="15%">
+        <div class="logo-right">
+            <input class="search" type="text" placeholder="Search games..." />
+            <div class="inner">
+                <a class="dollar btn-dollar" href="../wallet_page/wallet.html"><i class="gg-dollar"></i></a>
+                <a class="mail btn-mail" href="../mail_page/mail.html"><i class="gg-mail"></i></a>
+                <a class="login btn-login" href="../user_page/user.html"><i class="gg-profile"></i></a>
+                <a class="shopping-cart btn-shopping-cart"><i class="gg-shopping-cart"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="down">
+
+        <div class="left-sidebar">
+
+            <h2 class="filters">Filters</h2>
+            <i class="gg-card-hearts">
+                <a href="../whole_game_page/homepage.html" style="text-decoration:none;">
+                    <h3 style="font-style:normal; font-weight:normal; padding-left:30px; color:white;">Shop</h3>
+                </a>
+            </i>
+            <i class="gg-card-hearts">
+                <a href="../cart_page/homepage.html" style="text-decoration:none;">
+                    <h3 style="font-style:normal; font-weight:normal; padding-left:30px; color:white;">Cart</h3>
+                </a>
+            </i>
+            <i class="gg-card-hearts">
+                <a href="../favorites_page/favorites.html" style="text-decoration:none;">
+                    <h3 style="font-style:normal; font-weight:normal; padding-left:30px; color:white;">Libiary</h3>
+                </a>
+            </i>
+            <h2 class="classification" style="font-style:normal; font-weight:bold; color:white">Classification</h2>
+            <i class="gg-arrow-long-right-r" style="width: 30px; margin-top:10px">
+                <a href="#" style="text-decoration:none;">
+                    <h3
+                        style=" font-style:normal; font-weight:normal; padding-left:40px; margin-top:-10px; color:white ;">
+                        Shooting
+                    </h3>
+                </a>
+            </i>
+        </div>
+
+        <div class="main-widget">
+            <!-- <h2 class = "name">name : andy</h2>
+            <h2 class = "username">user name : andyBro</h2>
+            <h2 class = "email">email : andy@gmail.com</h2> -->
+            <div>
+                <img class="head-sticker" src="img/photo_2022-06-24_13-12-39.jpg">
+            </div>
+            <div class="user-widget">
+                <p class="name">
+                    name: name
+                </p>
+                <p class="phone">
+                    name: name
+                </p>
+                <p class="email">
+                    email:email
+                </p>
+                <p class="id">
+                    email:email
+                </p>
+                <p class="create_at">
+                    email:email
+                </p>
+                <p class="member_balance">
+                    email:email
+                </p>
+                <select class="auth_choose">
+                    <option>Admin</option>
+                    <option>Developer</option>
+                    <option>Member</option>
+                </select>
+                <button type="button" class="change_auth" onclick="changeAuth()">change authority</button>
+                <br>
+                <a href="javascript:logOut()" class="log_out">
+                    <p>
+                        LOG OUT
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
