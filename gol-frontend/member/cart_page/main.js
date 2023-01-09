@@ -33,16 +33,15 @@ $.ajax({
         response.forEach(element => {
             $(".review-photo").append(
                 `<div>
-                <a href = "javascript:routeToDetail(${element["game_id"]})">
-                    <img class="review" src="${element["game_picture"]}"  referrerpolicy="no-referrer">
-                </a>
-                
+                    <a href = "javascript:routeToDetail(${element["game_id"]})">
+                        <img class="review" src="${element["game_picture"]}"  referrerpolicy="no-referrer">
+                    </a>
                 </div>`
             );
             total_money += parseInt(element["game_sale_price"]) * (1 - parseFloat(element["game_discount"]));
         });
-        $(".review-photo").append(
-            `<h3 style="font-style:normal; font-weight:normal; padding-left:30px; color:white;">total : ${total_money} $</h3>`
+        $(".total-money").text(
+            "total : " + total_money
         )
     },
     error: (response) => console.log(response),
