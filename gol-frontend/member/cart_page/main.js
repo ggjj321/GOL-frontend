@@ -36,8 +36,7 @@ $.ajax({
                 <a href = "javascript:routeToDetail(${element["game_id"]})">
                     <img class="review" src="${element["game_picture"]}"  referrerpolicy="no-referrer">
                 </a>
-                <button class="btn-plus" type="button"><i class="gg-math-plus"></i></button>
-                <button class="btn-readme" type="button"><i class="gg-readme"></i></button>
+                
                 </div>`
             );
             total_money += parseInt(element["game_sale_price"]) * (1 - parseFloat(element["game_discount"]));
